@@ -1,0 +1,508 @@
+@charset "UTF-8";
+
+.c-app {
+	bottom: 0;
+
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+
+	left: 0;
+	min-width: $widthFull;
+	overflow: hidden;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+.c-app__content {
+	-moz-box-flex: 1;
+	-ms-flex: 1;
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	flex: 1;
+}
+
+.c-app__navigation {
+	background-color: $backgroundColor;
+	border-right: 1px solid $lineColor;
+	width: 220px;
+}
+
+.c-button {
+	background-color: $primaryColor;
+	border-radius: 20px;
+	display: inline-block;
+	color: white;
+	line-height: 40px;
+	padding-left: $paddingMedium;
+	padding-right: $paddingMedium;
+	text-align: center;
+	transition: background-color 0.2s;
+	width: 100%;
+
+	&:hover {
+		background-color: darken($primaryColor, 10%);
+		text-decoration: none;
+	}
+}
+
+.c-column {
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+
+	-moz-flex-direction: column;
+	-ms-flex-direction: column;
+	-webkit-flex-direction: column;
+	flex-direction: column;
+}
+
+.c-column__content {
+	-moz-box-flex: 1;
+	-ms-flex: 1;
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	flex: 1;
+
+	overflow-y: auto;
+	padding: $padding;
+
+	&.no-padding {
+		padding: 0;
+	}
+}
+
+.c-column__header {
+	border-bottom: 1px solid $lineColor;
+	height: 80px;
+	padding: 0 $padding;
+
+	h2 {
+		line-height: 80px;
+		margin: 0;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+}
+
+.c-content {
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+}
+
+.c-content__content {
+	-moz-box-flex: 1;
+	-ms-flex: 1;
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	flex: 1;
+
+	position: relative;
+}
+
+.c-content__navigation {
+	border-right: 1px solid $lineColor;
+	width: 300px;
+}
+
+.c-entrypoint {
+	background-color: $backgroundColor;
+	margin-bottom: $paddingBig;
+	padding-bottom: $paddingMedium;
+	padding-top: $paddingMedium;
+}
+
+.c-entrypoint__column {
+	-moz-box-flex: 1;
+	-ms-flex: 1;
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	flex: 1;
+
+	padding: $paddingSmall $paddingMedium 80px;
+	position: relative;
+	text-align: center;
+
+	&:first-child {
+		border-right: 1px solid $lineColor;
+	}
+}
+
+.c-entrypoint__button {
+	bottom: $paddingMedium;
+	left: $paddingMedium*2;
+	margin-bottom: 0;
+	position: absolute;
+	right: $paddingMedium*2;
+	text-align: center;
+
+	& > a:active {
+		color: $linkColor;
+	}
+}
+
+.c-entrypoint__wrapper {
+	@include wrapper;
+
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.c-intro {
+	@include font-thin-normal(26px);
+	@include wrapper;
+
+	color: $textColor2;
+	line-height: 1.4;
+	margin-bottom: $paddingBig;
+	text-align: center;
+}
+
+.c-link {
+	border-bottom: 1px solid $lineColor;
+	display: block;
+	padding: $padding $padding $padding 0;
+	margin-left: $padding;
+
+	&.is-active,
+	&:hover {
+		background-color: $backgroundColor;
+		border-top: 1px solid $lineColor;
+		margin-left: 0;
+		margin-top: -1px;
+		padding-left: $padding;
+		text-decoration: none;
+	}
+}
+
+.c-lists {
+	margin-bottom: $paddingMedium;
+	margin-top: 23px;
+}
+
+.c-lists__count {
+	@include font-light-normal(12px);
+
+	background-color: $primaryColor;
+	border-radius: 10px;
+	color: white;
+	display: inline-block;
+	float: right;
+	line-height: 20px;
+	margin-top: 1px;
+	min-width: 35px;
+	padding: 0 5px;
+	text-align: center;
+}
+
+.c-lists__item {
+	color: $textColor1;
+	display: block;
+	margin-bottom: 1px;
+	padding: $paddingSmall/2 $padding;
+	transition: background-color 0.1s;
+
+	img {
+		margin-right: $paddingSmall;
+		opacity: 0.3;
+		width: 16px;
+	}
+
+	&.is-active,
+	&:hover {
+		background-color: darken($backgroundColor, 10%);
+		text-decoration: none;
+	}
+}
+
+.c-lists__separator {
+	border: 0;
+	border-top: 1px solid $lineColor;
+	margin: 0 $padding $paddingMedium;
+}
+
+.c-login {
+	background-color: $primaryColor;
+	border-radius: 20px;
+	bottom: 0;
+	height: 205px;
+	left: $paddingMedium;
+	right: $paddingMedium;
+	overflow: hidden;
+	position: absolute;
+
+	& > * {
+		opacity: 1;
+	}
+
+	&.expand-enter {
+		bottom: $paddingMedium;
+		height: 40px;
+		left: $paddingMedium*2;
+		right: $paddingMedium*2;
+		transition: all .3s ease-in-out;
+
+		& > * {
+			opacity: 0;
+			transition: all 0.1s;
+			transition-delay: 0.2s;
+		}
+	}
+
+	&.expand-enter.expand-enter-active {
+		bottom: 0;
+		height: 205px;
+		left: $paddingMedium;
+		right: $paddingMedium;
+
+		& > * {
+			opacity: 1;
+		}
+	}
+
+	&.expand-leave {
+		bottom: 0;
+		height: 205px;
+		left: $paddingMedium;
+		right: $paddingMedium;
+		transition: all .3s ease-in-out;
+
+		& > * {
+			opacity: 1;
+			transition: all 0.1s;
+		}
+	}
+
+	&.expand-leave.expand-leave-active {
+		bottom: $paddingMedium;
+		height: 40px;
+		left: $paddingMedium*2;
+		right: $paddingMedium*2;
+
+		& > * {
+			opacity: 0;
+		}
+	}
+}
+
+.c-login__button {
+	background: $primaryColor;
+	border: 0;
+	border-left: 1px solid $backgroundColor;
+	bottom: 0;
+	cursor: pointer;
+	outline: none;
+	position: absolute;
+	right: 0;
+	top: 0;
+	transition: background-color 0.2s;
+
+	width: 80px;
+
+	img {
+		opacity: 0.8;
+		transition: opacity 0.2s;
+	}
+
+	&:hover {
+		background-color: $linkColor;
+
+		img {
+			opacity: 1.0;
+		}
+	}
+}
+
+.c-login__error {
+	color: white;
+	text-align: left;
+}
+
+.c-login__form {
+	padding: $paddingMedium 110px $paddingMedium $paddingMedium;
+}
+
+.c-login__input {
+	background: transparent;
+	border: 0;
+	border-bottom: 1px solid white;
+	color: white;
+	margin-bottom: 20px;
+	outline: none;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	width: 100%;
+
+	&::-moz-placeholder {
+		color: rgba(255, 255, 255, 0.5);
+	}
+
+	&:-ms-input-placeholder {
+		color: rgba(255, 255, 255, 0.5);
+	}
+
+	&::-webkit-input-placeholder {
+		color: rgba(255, 255, 255, 0.5);
+	}
+}
+
+.c-login__label {
+	color: rgba(255, 255, 255, 0.8);
+	display: block;
+	text-align: left;
+}
+
+.c-message {
+	@keyframes message-show {
+		0% {
+			top: -40px;
+		}
+		10% {
+			top: 0;
+		}
+
+		80% {
+			top: 0;
+		}
+
+		100% {
+			top: -40px;
+		}
+	}
+
+	@include font-light-normal(16px);
+
+	animation-duration: 4s;
+	animation-name: message-show;
+	animation-timing-function: ease-in-out;
+	background-color: $primaryColor;
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+	color: white;
+	line-height: 40px;
+	left: 50%;
+	margin-left: -200px;
+	position: absolute;
+	text-align: center;
+	top: -40px;
+	width: 400px;
+}
+
+.c-navbar {
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+
+}
+
+.c-navbar__header {
+	-moz-box-flex: 1;
+	-ms-flex: 1;
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	flex: 1;
+}
+
+.c-navbar__menu {
+	padding-left: $paddingSmall;
+	padding-top: 27px;
+}
+
+.c-navbar__menu-item {
+	display: inline-block;
+	margin-left: $paddingSmall;
+	opacity: 0.3;
+	transition: opacity 0.1s;
+
+	&.is-active,
+	&:hover {
+		opacity: 0.7;
+	}
+
+	img {
+		height: 26px;
+	}
+}
+
+.c-popup {
+	background-color: white;
+	border: 1px solid $lineColor;
+	border-radius: 5px;
+	box-shadow: 2px 2px 100px 3px rgba(50, 50, 50, 0.2);
+	right: 5px;
+	padding: $padding;
+	position: absolute;
+	top: 65px;
+	width: 400px;
+
+	&:after, &:before {
+		border: solid transparent;
+		bottom: 100%;
+		content: " ";
+		height: 0;
+		position: absolute;
+		right: 27px;
+		width: 0;
+	}
+
+	&:after {
+		border-color: rgba(136, 183, 213, 0);
+		border-bottom-color: white;
+		border-width: 10px;
+		margin-right: -10px;
+	}
+	&:before {
+		border-color: rgba(194, 225, 245, 0);
+		border-bottom-color: $lineColor;
+		border-width: 11px;
+		margin-right: -11px;
+	}
+
+	&.fade-enter {
+		opacity: 0.01;
+		transition: opacity 0.2s ease-in-out;
+	}
+
+	&.fade-enter.fade-enter-active {
+		opacity: 1;
+	}
+
+	&.fade-leave {
+		opacity: 1;
+		transition: opacity 0.2s ease-in-out;
+	}
+
+	&.fade-leave.fade-leave-active {
+		opacity: 0;
+	}
+}
+
+.c-tag {
+	@include font-light-normal(12px);
+
+	background-color: $primaryColor;
+	border-radius: 10px;
+	color: white;
+	display: inline-block;
+	line-height: 20px;
+	margin-right: 5px;
+	padding: 0 10px;
+	text-align: center;
+}

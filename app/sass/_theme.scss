@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+$primaryColor: #f37f4a;
+$backgroundColor: lighten(#b0ad97, 30%);
+$lineColor: lighten(#b0ad97, 10%);
+$linkColor: darken($primaryColor, 10%);
+$textColor1: #333;
+$textColor2: #777;
+
+$paddingSmall: 10px;
+$paddingMedium: 30px;
+$paddingBig: 50px;
+$padding: 20px;
+
+$width: 840px;
+$widthFull: 1000px;

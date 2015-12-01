@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+@mixin font-thin-normal($size) {
+	font-family: "HelveticaNeue-Thin", "Helvetica Neue Thin", "HelveticaNeueW01-Thin", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-size: $size;
+	font-style: normal;
+}
+
+@mixin font-light-normal($size) {
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeueW01-45Ligh", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-size: $size;
+	font-style: normal;
+}
+
+@mixin font-light-italic($size) {
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeueW01-45Ligh", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-size: $size;
+	font-style: italic;
+}
+
+@mixin font-standard-normal($size) {
+	font-family: "HelveticaNeue-Medium", "Helvetica Neue Medium", "HelveticaNeueW01-65Medi", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-size: $size;
+	font-style: normal;
+}
+
+@mixin wrapper {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: $width;
+	padding-left: $paddingMedium;
+	padding-right: $paddingMedium;
+}
